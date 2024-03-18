@@ -15,6 +15,7 @@ function AboutUsStatsSection(Props) {
                   className: "flex gap-x-20"
                 }, $$Array.map((function (statItem) {
                         return React.createElement("div", {
+                                    key: statItem.label,
                                     className: "flex flex-col items-center"
                                   }, React.createElement("h1", {
                                         className: "text-4xl font-bold"

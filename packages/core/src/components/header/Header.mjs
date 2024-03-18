@@ -25,12 +25,14 @@ function Header(Props) {
                           }), navItems))), React.createElement("nav", undefined, React.createElement("ul", {
                       className: "flex gap-x-6"
                     }, $$Array.map((function (nav) {
+                            var label = nav.label;
                             return React.createElement("li", {
+                                        key: label,
                                         className: "hover:underline decoration-primary underline-offset-4 "
                                       }, React.createElement("a", {
                                             className: "font-semibold",
                                             href: nav.redirectTo
-                                          }, nav.label));
+                                          }, label));
                           }), rightNavItems))));
 }
 

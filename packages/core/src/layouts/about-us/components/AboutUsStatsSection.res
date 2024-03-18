@@ -6,7 +6,7 @@ let make = (~statsData: AboutUsData.stats) => {
     <div className="flex gap-x-20">
       {statsData.statItems
       |> Array.map((statItem: AboutUsData.statItem) => {
-        <div className="flex flex-col items-center">
+        <div key={statItem.label} className="flex flex-col items-center">
           <h1 className="text-4xl font-bold"> {statItem.count->React.string} </h1>
           <p className="font-semibold"> {statItem.label->React.string} </p>
         </div>

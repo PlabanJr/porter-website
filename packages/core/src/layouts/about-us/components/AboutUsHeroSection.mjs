@@ -12,6 +12,7 @@ function AboutUsHeroSection(Props) {
                 }, $$Array.mapi((function (index, row) {
                         var reverseRow = index % 2 === 0;
                         return React.createElement("div", {
+                                    key: String(index),
                                     className: "flex " + (
                                       reverseRow ? "flex-row" : "flex-row-reverse"
                                     ) + " justify-between items-center"
