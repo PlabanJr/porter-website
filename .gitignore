@@ -1,1 +1,9 @@
 node_modules/
+
+packages/**/lib
+
+
+packages/**/src/**/**/**/*.mjs
+packages/**/src/**/**/**.mjs
+packages/**/.merlin
+packages/**/.bsb.lock

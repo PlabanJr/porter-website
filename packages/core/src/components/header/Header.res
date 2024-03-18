@@ -27,7 +27,7 @@ let make = (
         |> Array.map((nav: navItem) => {
           let {label, redirectTo} = nav
 
-          <li className="hover:underline decoration-primary underline-offset-4 ">
+          <li key={label} className="hover:underline decoration-primary underline-offset-4 ">
             <a href={redirectTo} className="font-semibold"> {label->React.string} </a>
           </li>
         })

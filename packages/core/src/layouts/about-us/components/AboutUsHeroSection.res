@@ -6,6 +6,7 @@ let make = (~rows: array<AboutUsData.row>) => {
       |> Array.mapi((index: int, row: AboutUsData.row) => {
         let reverseRow = mod(index, 2) == 0
         <div
+          key={index->Belt.Int.toString}
           className={`flex ${!reverseRow
               ? "flex-row-reverse"
               : "flex-row"} justify-between items-center`}>
