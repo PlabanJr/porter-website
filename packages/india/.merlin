@@ -1,0 +1,12 @@
+####{BSB GENERATED: NO EDIT
+FLG -ppx '/Users/plabanjr/Projects/porter-website/node_modules/rescript/darwin/bsc.exe -as-ppx -bs-jsx 3'
+S /Users/plabanjr/Projects/porter-website/node_modules/rescript/lib/ocaml
+B /Users/plabanjr/Projects/porter-website/node_modules/rescript/lib/ocaml
+FLG -w +a-4-9-20-40-41-42-50-61-102-3-40-42-61
+S /Users/plabanjr/Projects/porter-website/node_modules/@rescript/react/lib/ocaml
+B /Users/plabanjr/Projects/porter-website/node_modules/@rescript/react/lib/ocaml
+S /Users/plabanjr/Projects/porter-website/packages/india/node_modules/@porter/core/lib/ocaml
+B /Users/plabanjr/Projects/porter-website/packages/india/node_modules/@porter/core/lib/ocaml
+S src/containers/about-us
+B lib/bs/src/containers/about-us
+####BSB GENERATED: NO EDIT}

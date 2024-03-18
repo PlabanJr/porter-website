@@ -1,0 +1,31 @@
+{
+    "name": "@porter/international",
+    "reason": {
+        "react-jsx": 3
+    },
+    "refmt": 3,
+    "bs-dependencies": [
+        "@rescript/react",
+        "@porter/core"
+    ],
+    "ppx-flags": [],
+    "sources": [
+        {
+            "dir": "src",
+            "subdirs": true
+        }
+    ],
+    "package-specs": {
+        "module": "es6-global",
+        "in-source": true
+    },
+    "suffix": ".mjs",
+    "warnings": {
+        "number": "-3",
+        "error": "+101+8"
+    },
+    "gentypeconfig": {
+        "language": "untyped",
+        "shims": []
+    }
+}
