@@ -15,7 +15,7 @@ ENV LD_LIBRARY_PATH=/usr/lib:/lib64:/lib
 # node modules if package.json is modified
 COPY packages/international/package.json yarn.lock ./
 
-RUN yarn install --ignore-engines --frozen-lockfile
+RUN yarn install
 
 ADD . ./
 
