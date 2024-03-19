@@ -10,6 +10,8 @@ INFRA_STACKS=$3
 CURR_TS=$(date +"%s")
 ENV_FILE=.env
 
+aws s3 sync s3://porter-backend-platforms/packages/deployer/v1/ deploy/deployer/
+
 #prepare environment variables
 echo "RELEASE_TS=$CURR_TS" >>$ENV_FILE
 
