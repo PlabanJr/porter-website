@@ -3,10 +3,10 @@ FROM 978222968597.dkr.ecr.ap-southeast-1.amazonaws.com/node:18.15.0-alpine
 # Install dependencies
 #Requirements for bs-platform
 RUN apk --update add --no-cache bash vim python3 g++ gcc musl-dev make m4 git curl \
-	&& ln -s /usr/bin/python3 /usr/bin/python \
+  && test -f /usr/bin/python || ln -s /usr/bin/python3 /usr/bin/python\
 	&& wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub \
-	&& wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.30-r0/glibc-2.30-r0.apk \
-	&& apk add glibc-2.30-r0.apk
+	&& wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.33-r0/glibc-2.33-r0.apk \
+	&& apk add --force glibc-2.33-r0.apk
 
 # To help the ninja locate the shared libraries
 ENV LD_LIBRARY_PATH=/usr/lib:/lib64:/lib
