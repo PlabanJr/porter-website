@@ -14,27 +14,12 @@ ENV LD_LIBRARY_PATH=/usr/lib:/lib64:/lib
 # Install lerna globally
 RUN yarn global add lerna
 
-# Print the current working directory
-RUN pwd
-
 # Set working directory to the package directory
-WORKDIR /packages/international
-
-# Print the current working directory
-RUN pwd
+COPY /packages/international/package.json ./
 
 RUN yarn install
 
 ADD . ./
-
-WORKDIR /packages/international
-
-# Print the current working directory
-RUN pwd
-
-RUN pwd
-
-RUN pwd
 
 RUN yarn build
 
