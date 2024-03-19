@@ -21,4 +21,4 @@ source ./$ENV_FILE
 
 
 cd $WORKSPACE
-python3 ./deploy/deploy.py
+python3 packages/international/deploy/deploy.py
