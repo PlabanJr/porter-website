@@ -1,4 +1,4 @@
-FROM 978222968597.dkr.ecr.ap-southeast-1.amazonaws.com/node:16.16.0-alpine
+FROM 978222968597.dkr.ecr.ap-southeast-1.amazonaws.com/node:18.15.0-alpine
 
 # Install dependencies
 #Requirements for bs-platform
