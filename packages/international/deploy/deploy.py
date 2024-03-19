@@ -13,7 +13,7 @@ def main():
     for stack in stacks.split(','):
       def deploy(cluster, service):
         ecs = Ecs(env, stack)
-        file = f'deploy/taskdefs/{stack}-{env}.json'
+        file = f'packages/international/deploy/taskdefs/{stack}-{env}.json'
         
         with open(file) as f:
           taskdef=f.read().replace('{box}', str(box))
@@ -23,7 +23,7 @@ def main():
           f.write(taskdef)
           f.close()
 
-        imgs = [build(env, f'frontend-website-{env}-{stack}', 'deploy/server')]
+        imgs = [build(env, f'frontend-website-{env}-{stack}', 'packages/international/deploy/server')]
         task = ecs.register_task_definition(file, imgs)
         ecs.update_service(env, cluster, service, task)
 
