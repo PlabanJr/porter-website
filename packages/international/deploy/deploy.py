@@ -5,7 +5,7 @@ from deployer.ecs import Ecs
 
 
 def main():
-    assert len(sys.argv) >= 3, 'usage: python main.py <env> <box> <stacks>'
+    assert len(sys.argv) >= 4, 'usage: python main.py <env> <box> <stacks>'
     env = sys.argv[1]
     box = sys.argv[2]
     stacks = sys.argv[3]
