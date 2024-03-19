@@ -11,14 +11,23 @@ RUN apk --update add --no-cache bash vim python3 g++ gcc musl-dev make m4 git cu
 # To help the ninja locate the shared libraries
 ENV LD_LIBRARY_PATH=/usr/lib:/lib64:/lib
 
+# Print the current working directory
+RUN pwd
+
 # Set working directory to the package directory
 WORKDIR /packages/international
+
+# Print the current working directory
+RUN pwd
 
 RUN yarn install
 
 ADD . ./
 
 WORKDIR /packages/international
+
+# Print the current working directory
+RUN pwd
 
 RUN yarn build
 
