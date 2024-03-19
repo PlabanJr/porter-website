@@ -11,11 +11,14 @@ RUN apk --update add --no-cache bash vim python3 g++ gcc musl-dev make m4 git cu
 # To help the ninja locate the shared libraries
 ENV LD_LIBRARY_PATH=/usr/lib:/lib64:/lib
 
-COPY packages/international/package.json yarn.lock ./
+# Set working directory to the package directory
+WORKDIR /packages/international
 
 RUN yarn install
 
 ADD . ./
+
+WORKDIR /packages/international
 
 RUN yarn build
 
