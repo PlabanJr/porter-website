@@ -11,10 +11,7 @@ RUN apk --update add --no-cache bash vim python3 g++ gcc musl-dev make m4 git cu
 # To help the ninja locate the shared libraries
 ENV LD_LIBRARY_PATH=/usr/lib:/lib64:/lib
 
-# Copy package.json, so that yarn install will only do a fresh installation of
-# node modules if package.json is modified
-# Set working directory to the package directory
-WORKDIR /packages/international
+COPY packages/international/package.json yarn.lock ./
 
 RUN yarn install
 
