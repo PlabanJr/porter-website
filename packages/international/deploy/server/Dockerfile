@@ -13,7 +13,7 @@ ENV LD_LIBRARY_PATH=/usr/lib:/lib64:/lib
 
 # Copy package.json, so that yarn install will only do a fresh installation of
 # node modules if package.json is modified
-COPY package.json yarn.lock ./
+COPY packages/international/package.json packages/international/yarn.lock ./
 
 RUN yarn install
 
