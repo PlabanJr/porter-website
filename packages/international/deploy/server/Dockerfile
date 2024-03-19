@@ -19,7 +19,7 @@ RUN yarn install
 
 ADD . ./
 
-RUN yarn build
+RUN yarn buildi
 
 # Expose the app port
 EXPOSE 3003
