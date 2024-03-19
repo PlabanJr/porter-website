@@ -32,6 +32,10 @@ WORKDIR /packages/international
 # Print the current working directory
 RUN pwd
 
+RUN pwd
+
+RUN pwd
+
 RUN yarn build
 
 # Expose the app port
