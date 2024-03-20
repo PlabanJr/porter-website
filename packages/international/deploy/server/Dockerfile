@@ -15,13 +15,13 @@ ENV LD_LIBRARY_PATH=/usr/lib:/lib64:/lib
 RUN yarn global add lerna
 
 # Set working directory to the package directory
-COPY /packages/international/package.json /packages/international/yarn.lock ./
+COPY /packages/international/package.json  /packages/international/yarn.lock ./
 
 RUN yarn install
 
 ADD . ./
 
-RUN yarn build
+RUN yarn buildi
 
 # Expose the app port
 EXPOSE 3003
