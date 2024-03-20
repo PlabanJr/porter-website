@@ -1,0 +1,41 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "frontend-website-staging",
+      "image": "frontend-website-server",
+      "cpu": 128,
+      "memory": 256,
+      "memoryReservation": 256,
+      "portMappings": [
+        {
+          "containerPort": 3003,
+          "hostPort": 0,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "environment": [
+        {
+          "name": "ENV",
+          "value": "staging"
+        },
+        {
+          "name": "INFRA_STACK",
+          "value": "uae"
+        },
+        {
+          "name": "INFRA_REGION",
+          "value": "middle-east"
+        },
+        {
+          "name": "TZ",
+          "value": "Asia/Dubai"
+        }
+      ]
+    }
+  ],
+  "family": "me-uae-staging-frontend-website-{box}",
+  "taskRoleArn": "arn:aws:iam::978222968597:role/me-uae-staging-frontend-ecs-task-role",
+  "executionRoleArn": "arn:aws:iam::978222968597:role/me-uae-staging-frontend-ecs-task-exec-role",
+  "networkMode": "bridge"
+}
