@@ -11,9 +11,6 @@ RUN apk --update add --no-cache bash vim python3 g++ gcc musl-dev make m4 git cu
 # To help the ninja locate the shared libraries
 ENV LD_LIBRARY_PATH=/usr/lib:/lib64:/lib
 
-# Install lerna globally
-RUN yarn global add lerna
-
 # Set working directory to the package directory
 COPY package.json  yarn.lock ./
 
