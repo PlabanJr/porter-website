@@ -15,13 +15,17 @@ ENV LD_LIBRARY_PATH=/usr/lib:/lib64:/lib
 RUN yarn global add lerna
 
 # Set working directory to the package directory
-COPY /packages/international/package.json  /packages/international/yarn.lock ./
+COPY package.json  yarn.lock ./
 
 RUN yarn install
 
 ADD . ./
 
 RUN yarn build
+
+WORKDIR /packages/international
+
+RUN yarn install
 
 RUN yarn buildi
 
